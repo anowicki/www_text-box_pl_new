@@ -1,0 +1,16 @@
+<VirtualHost *:80>
+
+    ServerName     new.text-box.pl
+    DocumentRoot   /var/www/sites/www_text-box_pl_new
+    DirectoryIndex index.php
+
+    ErrorLog  /var/log/httpd/www_text-box_pl_new.error
+    CustomLog /var/log/httpd/www_text-box_pl_new.access common
+
+    <Directory /var/www/sites/www_text-box_pl_new/>
+        AllowOverride All
+        Allow from All
+        Require all granted
+    </Directory>
+
+</VirtualHost>
